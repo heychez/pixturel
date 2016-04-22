@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="public/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/app.css">
+</head>
+<body>
+	<section class="container-fluid">
+		<div class="canvas-container">
+			<canvas id="canvas" width="800" height="600"></canvas>
+		</div>
+	</section>
+
+	<div class="audio">
+		<div class="audio-volumen">
+			<input type="range" class="volumen" value="0.40" min="-1" max="1" step="0.025" onchange="setVolumen(this.value)" oninput="setVolumen(this.value)" data-toggle="tooltip" data-placement="top" title="Set volumen">
+		</div>
+		<div><a id="save-picture">Save picture</a></div>
+		<div id="audio-progress"><div id="bar"></div></div>
+		<audio id="myAudio">
+			<source src="public/tracks/1.mp3" type="audio/mpeg">
+			Your browser does no support the audio element.
+		</audio>
+	</div>
+
+	<section class="container-fluid content">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="http://www.dolby.com/la/es/index.html" target="_blank"><img height="350px" src="public/img/logos/DolbyAudioPlatform_white.png" data-toggle="tooltip" data-placement="top" title="dolby.com"></a>
+			</div>
+			<div class="col-md-6">
+				<a href="https://soundcloud.com" target="_blank"><img height="250px" src="public/img/logos/soundcloud-icon.png"data-toggle="tooltip" data-placement="top" title="soundcloud.com"></a>
+				<p>
+					All songs are in this <a class="link" href="https://soundcloud.com/roberto-cuadros-loayza/sets/fresh" target="_blank">playlist</a>, enjoy it! <a class="link" href="http://uiconstock.com" target="_blank">(soundcloud icon)</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="container-fluid info">
+		<div class="info-body row">
+			<div class="col-sm-4 col">
+				<img height="20px" src="public/img/logos/DolbyAudio_Hrztl_black.png">
+			</div>
+			<div class="col-sm-4 col">Pixturel &copy; 2016</div>
+			<div class="col-sm-4 col author">
+				by <span class="author-name">Roberto Cuadros</span> - <a href="http://blup.space" target="_blank">Blup.space</a>
+			</div>
+		</div>
+	</footer>
+
+	<div id="myNav" class="overlay">
+	  <div class="overlay-content">
+	  	A random drawing created to the rhythm of the song for each new visitor! 
+	  	<span class="glyphicon glyphicon-music" aria-hidden="true"></span> 
+	  	<span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 
+	  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+	  </div>
+	</div>
+
+	<script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/dolbydeveloper/1.1.0/js/dolby.min.js"></script>
+	<script type="text/javascript" src="public/lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+
+		setInterval(function(){
+			document.getElementById("myNav").style.height = "0%";
+		}, 5000);
+	</script>
+
+	<script type="text/javascript" src="public/lib/fabric.js/dist/fabric.min.js"></script>
+	<script type="text/javascript" src="public/js/gcolors.js"></script>
+	<script type="text/javascript" src="public/js/app.js" canvas="canvas"></script>
+</body>
+</html>
