@@ -71,7 +71,7 @@ if (Math.floor((Math.random() * 2) + 0) == 0)
 else
 	colors = GCOLORS_A[ind];
 
-gainNode.gain.value = 0.4; //1;
+gainNode.gain.value = 0; //1;
 
 function setVolumen(val){
 	gainNode.gain.value = val;
