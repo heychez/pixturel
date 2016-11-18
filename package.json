@@ -1,0 +1,23 @@
+{
+  "name": "pixturel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "bower-install": "bower install --allow-root"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heychez/pixturel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heychez/pixturel/issues"
+  },
+  "homepage": "https://github.com/heychez/pixturel#readme"
+}
